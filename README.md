@@ -121,3 +121,12 @@ Now after coding, running to check load_data.py
 ```bash
 python src/load_data.py
 ```
+Now, Lets track the data change occuring from get_data and load_data files
+
+Update dvc.yaml file with data tracing stage
+
+Execute data tracing
+```bash
+dvc repro
+```
+
