@@ -1,7 +1,7 @@
 ## read params
 ## process
 ## return dataframe
-import os
+
 import argparse
 import pandas as pd
 import yaml
