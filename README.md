@@ -92,9 +92,16 @@ git branch -M main
 
 git push -u origin main
 ```
-Now, Let's create a file to load our data to the app
+Now, Let's create a file to read our data to the app
 
 ```bash
 touch src/get_data.py
 ```
 
+Let's keep pushing files to remote repository for each individual file completed
+
+```bash
+git add . && git commit -m "updated get_data.py"
+
+git push origin main
+```
