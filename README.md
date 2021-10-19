@@ -98,10 +98,26 @@ Now, Let's create a file to read our data to the app
 touch src/get_data.py
 ```
 
+Now after coding, running to check get_data.py
+
+```bash
+python src/get_data.py
+```
+
 Let's keep pushing files to remote repository for each individual file completed
 
 ```bash
 git add . && git commit -m "updated get_data.py"
 
 git push origin main
+```
+Create load data file to copy the file and dump it in raw data folder to keep a copy of raw unprocessed data
+
+```bash
+touch src/load_data.py
+```
+Now after coding, running to check load_data.py
+
+```bash
+python src/load_data.py
 ```
