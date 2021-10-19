@@ -1,0 +1,7 @@
+{
+    "python.pythonPath": "/Users/harishkumar/opt/anaconda3/python",
+    "python.terminal.activateEnvironment": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+
+}
