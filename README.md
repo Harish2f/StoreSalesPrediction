@@ -42,7 +42,7 @@ Now Create a directory 'data_given' to keep our initial data and import Train an
 mkdir data_given
 ```
 
-As a Good practice, let's push all the files to GIT and also start versioning our data using DVC
+Let's push all the files to GIT remote repository and also start versioning our data using DVC
 
 First, we have to initialize GIT and DVC
 
@@ -92,3 +92,9 @@ git branch -M main
 
 git push -u origin main
 ```
+Now, Let's create a file to load our data to the app
+
+```bash
+touch src/get_data.py
+```
+
