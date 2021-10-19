@@ -130,3 +130,21 @@ Execute data tracing
 dvc repro
 ```
 
+Create split data for splitting train data for cross validation on our ML Model
+
+```bash
+touch src/split_data.py
+```
+
+Also, configure dvc.yaml  to track the split data
+```bash
+dvc repro
+```
+
+Push files to remote
+```bash
+git add . && git commit -m "stage 2 complete"
+
+git push origin main
+```
+
