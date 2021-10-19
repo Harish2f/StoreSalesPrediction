@@ -148,3 +148,16 @@ git add . && git commit -m "stage 2 complete"
 git push origin main
 ```
 
+Time to create Train and Evaluate file to build our model
+
+```bash
+touch src/train_and_evaluate.py
+```
+
+Push files to remote
+```bash
+git add . && git commit -m "updated train&evaluate file"
+
+git push origin main
+```
+
