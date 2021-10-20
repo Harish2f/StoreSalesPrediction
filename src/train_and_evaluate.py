@@ -27,7 +27,7 @@ def train_and_evaluate(config_path):
     train_data_path = config["split_data"]["train_path"]
     model_dir = config["model_dir"]
 
-    n_estimators = config["estimators"]["ElasticNet"]["params"]["n_estimators"]
+    n_estimators = config["estimators"]["RandomForestRegressor"]["params"]["n_estimators"]
 
     target = [config["base"]["target_col"]]
 
@@ -49,7 +49,7 @@ def train_and_evaluate(config_path):
     
     (rmse, mae, r2) = eval_metrics(test_y, predicted_qualities)
 
-    print("RandomForest model (n_estimators=%f):" % (n_estimators)
+    print("RandomForest model (n_estimators=%f):" % (n_estimators))
     print("  RMSE: %s" % rmse)
     print("  MAE: %s" % mae)
     print("  R2: %s" % r2)
