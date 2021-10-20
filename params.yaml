@@ -1,5 +1,6 @@
 base:
   project: StoreSales-Prediction
+  random_state: 42
   target_col: TARGET
 
 data_source:
