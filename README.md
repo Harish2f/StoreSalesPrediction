@@ -2,6 +2,12 @@ This project is a complete end to end implementation of Store Sales Prediction u
 
 The Steps involved in building and deploying this project is as below:
 
+Activate conda environment
+
+```bash
+source /Users/harishkumar/opt/anaconda3/bin/activate
+```
+
 Create env
 
 ```bash
@@ -159,5 +165,27 @@ Push files to remote
 git add . && git commit -m "updated train&evaluate file"
 
 git push origin main
+```
+
+
+Also, configure dvc.yaml  to track the train and evaluate data
+```bash
+dvc repro
+```
+
+Push files to remote
+```bash
+git add . && git commit -m "stage 3 complete"
+
+git push origin main
+```
+
+Let's track and record changes in our params and metrics from ML Model to identify model derpreciation and possible retraining approach
+
+```bash
+mkdir report
+
+touch report/params.json
+touch report/scores.json
 ```
 
