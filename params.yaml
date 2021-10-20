@@ -1,7 +1,7 @@
 base:
   project: StoreSales-Prediction
   random_state: 42
-  target_col: TARGET
+  target_col: Item_Outlet_Sales
 
 data_source:
   s3_source: data_given/Train.csv
