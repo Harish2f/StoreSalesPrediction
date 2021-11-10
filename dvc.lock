@@ -26,7 +26,7 @@ stages:
       md5: c6fac885fe5fb752a1e712d403c5e66c
       size: 1071
     outs:
-    - path: data/processed/test_salespred..csv
+    - path: data/processed/test_salespred.csv
       md5: 9b385c378fe5722aae41900d5dca73f4
       size: 172602
     - path: data/processed/train_salespred.csv
