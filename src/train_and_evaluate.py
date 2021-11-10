@@ -40,44 +40,50 @@ def train_and_evaluate(config_path):
     train_x = train.drop(target, axis=1)
     test_x = test.drop(target, axis=1)
 
-    rf = RandomForestRegressor(
-        n_estimators=n_estimators
-        )
-    rf.fit(train_x, train_y)
-
-    predicted_qualities = rf.predict(test_x)
+    try:
     
-    (rmse, mae, r2) = eval_metrics(test_y, predicted_qualities)
+        rf = RandomForestRegressor(
+            n_estimators=n_estimators
+            )
+        rf.fit(train_x, train_y)
 
-    print("RandomForest model (n_estimators=%f):" % (n_estimators))
-    print("  RMSE: %s" % rmse)
-    print("  MAE: %s" % mae)
-    print("  R2: %s" % r2)
+        predicted_qualities = rf.predict(test_x)
+    
+        (rmse, mae, r2) = eval_metrics(test_y, predicted_qualities)
+
+        print("RandomForest model (n_estimators=%f):" % (n_estimators))
+        print("  RMSE: %s" % rmse)
+        print("  MAE: %s" % mae)
+        print("  R2: %s" % r2)
 
 #####################################################
-    scores_file = config["reports"]["scores"]
-    params_file = config["reports"]["params"]
+        scores_file = config["reports"]["scores"]
+        params_file = config["reports"]["params"]
 
-    with open(scores_file, "w") as f:
-        scores = {
-            "rmse": rmse,
-            "mae": mae,
-            "r2": r2
-        }
-        json.dump(scores, f, indent=4)
+        with open(scores_file, "w") as f:
+            scores = {
+                "rmse": rmse,
+                "mae": mae,
+                "r2": r2
+            }
+            json.dump(scores, f, indent=4)
 
-    with open(params_file, "w") as f:
-        params = {
-            "n_estimators": n_estimators,
-        }
-        json.dump(params, f, indent=4)
+        with open(params_file, "w") as f:
+            params = {
+                "n_estimators": n_estimators,
+            }
+            json.dump(params, f, indent=4)
 #####################################################
 
 
-    os.makedirs(model_dir, exist_ok=True)
-    model_path = os.path.join(model_dir, "model.joblib")
+        os.makedirs(model_dir, exist_ok=True)
+        model_path = os.path.join(model_dir, "model.joblib")
 
-    joblib.dump(rf, model_path)
+        joblib.dump(rf, model_path)
+        
+    except ValueError:
+        print('Line i is corrupt!')
+        
 
 
 

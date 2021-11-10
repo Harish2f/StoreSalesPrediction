@@ -24,7 +24,7 @@ def TrainNewfeatures(config_path):
     output: return train_data as pandas DataFrame
     '''
     config = read_params(config_path)
-    raw_data_path = config["missing_values"]["raw_dataset_csv"]
+    raw_data_path = config["load_data"]["raw_dataset_csv"]
     train = pd.read_csv(raw_data_path, sep=",")
     
     def feature(s):

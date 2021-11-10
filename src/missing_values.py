@@ -26,7 +26,8 @@ def trainmissingvalues(config_path):
         it=train.iloc[i,1]
         train.iloc[i,3]=np.mean(train[train['Item_Weight']==it]['Item_Visibility'])
         
-    return train
+    #return train
+    train.to_csv(raw_data_path, sep=",", index=False)
 
 
 if __name__=="__main__":
