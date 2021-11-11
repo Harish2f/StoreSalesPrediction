@@ -4,3 +4,15 @@ sklearn
 pandas
 numpy
 PyYAML
+argparse
+joblib
+seaborn
+matplotlib
+lightgbm
+flake8
+flask
+gunicorn
+pytest
+tox
+
+
