@@ -136,6 +136,39 @@ Execute data tracing
 dvc repro
 ```
 
+Create file to treat missing values
+
+```bash
+touch src/missing_values.py
+```
+Now after coding, running to check missing_values.py
+
+```bash
+python src/missing_values.py
+```
+
+Create file to generate new features from existing features
+
+```bash
+touch src/new_features.py
+```
+Now after coding, running to check new_features.py
+
+```bash
+python src/new_features.py
+```
+
+Create feature encoding file
+
+```bash
+touch src/feature_encoding.py
+```
+Now after coding, running to check feature_encoding.py
+
+```bash
+python src/feature_encoding.py
+```
+
 Create split data for splitting train data for cross validation on our ML Model
 
 ```bash
@@ -189,3 +222,29 @@ touch report/params.json
 touch report/scores.json
 ```
 
+Now, Lets create Test files and Test environment
+
+```bash
+
+touch tox.ini
+
+```
+
+Create Test cases with test files
+
+```bash
+
+mkdir tests
+
+touch tests/conftest.py tests/test_config.py
+
+touch tests/__init__.py
+
+```
+
+Push files to remote
+```bash
+git add . && git commit -m "created test files"
+
+git push origin main
+```
