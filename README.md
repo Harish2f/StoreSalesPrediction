@@ -225,9 +225,7 @@ touch report/scores.json
 Now, Lets create Test files and Test environment
 
 ```bash
-
 touch tox.ini
-
 ```
 
 Create Test cases with test files
@@ -247,4 +245,41 @@ Push files to remote
 git add . && git commit -m "created test files"
 
 git push origin main
+```
+
+Create Setup file to make the app as a package
+
+```bash
+touch setup.py
+```
+
+tox command -
+```bash
+tox
+```
+
+for rebuilding -
+
+```bash
+tox -r 
+```
+
+pytest command
+
+```bash
+pytest -v
+```
+
+Check if the package is installing
+
+```bash
+pip install -e .
+
+pip freeze
+```
+
+Build the package
+
+```bash
+python setup.py sdist bdist_wheel
 ```
