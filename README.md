@@ -350,3 +350,10 @@ touch webapp/templates/404.html
 
 touch webapp/templates/base.html
 ```
+
+Push files to remote
+```bash
+git add . && git commit -m "updated UI"
+
+git push origin main
+```
