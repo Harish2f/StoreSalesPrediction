@@ -283,3 +283,37 @@ Build the package
 ```bash
 python setup.py sdist bdist_wheel
 ```
+Create Prediction files to  predict and keep updated model 
+
+```bash
+mkdir -p prediction_service/model
+
+mkdir webapp
+
+touch app.py
+
+touch prediction_service/__init__.py
+
+touch prediction_service/prediction.py
+
+```
+
+Crete CSS and HTML files for app UI
+
+```bash
+mkdir -p webapp/static/css
+
+mkdir -p webapp/static/script
+
+touch webapp/static/css/main.css
+
+touch webapp/static/script/index.js
+
+mkdir webapp/templates
+
+touch webapp/templates/index.html
+
+touch webapp/templates/404.html
+
+touch webapp/templates/base.html
+```
