@@ -367,3 +367,12 @@ git add . && git commit -m "updated app configuration"
 
 git push origin main
 ```
+
+## Now since the app is ready, lets create CI-CD workflow for automatic deployment
+
+```bash
+mkdir -p .github/workflows/ 
+
+touch .github/workflows/ci-cd.yaml
+```
+
