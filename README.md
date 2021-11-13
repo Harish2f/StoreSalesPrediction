@@ -376,3 +376,10 @@ mkdir -p .github/workflows/
 touch .github/workflows/ci-cd.yaml
 ```
 
+After updating CI-CD yaml
+Push files to remote
+```bash
+git add . && git commit -m "github action workflow updated"
+
+git push origin main
+```
