@@ -4,7 +4,7 @@ This project is a complete end to end implementation of Store Sales Prediction u
 Primary aim of this project is to build machine learning model that should be able to predict the sales of the different stores of Big Mart according to the provided dataset.
 
 [You can reach the application here]
-https://salepredict.herokuapp.com/
+https://storesalesprediction1.herokuapp.com/
 
 
 # Problem statement
