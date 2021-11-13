@@ -355,3 +355,15 @@ git add . && git commit -m "updated UI"
 
 git push origin main
 ```
+
+Create Schema file in JSON to accept values in Prediction model
+
+```bash
+touch prediction_service/schema_in.json
+```
+Push files to remote
+```bash
+git add . && git commit -m "updated app configuration"
+
+git push origin main
+```

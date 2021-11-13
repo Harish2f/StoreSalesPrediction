@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 ll=LabelEncoder()
-from new_features import TrainNewfeatures
 from get_data import read_params
 import argparse
 

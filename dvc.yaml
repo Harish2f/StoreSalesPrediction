@@ -12,7 +12,6 @@ stages:
     cmd: python src/split_data.py --config=params.yaml
     deps:
     - src/missing_values.py
-    - src/new_features.py
     - src/feature_encoding.py
     - src/split_data.py
     - data/raw/Train.csv
