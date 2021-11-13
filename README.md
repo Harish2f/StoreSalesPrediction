@@ -383,3 +383,15 @@ git add . && git commit -m "github action workflow updated"
 
 git push origin main
 ```
+Now Create Secrets for your Deployment as per the criteria
+
+As  a final step for deplyment, create Procfile
+
+```bash
+
+touch Procfile
+
+Inside Procfile, insert :
+
+web gunicorn app:app
+```
