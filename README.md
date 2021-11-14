@@ -368,6 +368,24 @@ git add . && git commit -m "updated app configuration"
 git push origin main
 ```
 
+create an artifcats folder to Log ML metrics
+
+```bash
+
+mkdir artifacts
+
+mlflow server \
+    --backend-store-uri sqlite:///mlflow.db \
+    --default-artifact-root ./artifacts \
+    --host 0.0.0.0 -p 1234
+
+```
+Run DVC to check MLflow configuration
+
+```bash
+dvc repro
+```
+
 ## Now since the app is ready, lets create CI-CD workflow for automatic deployment
 
 ```bash

@@ -27,11 +27,16 @@ stages:
     - src/train_and_evaluate.py
     params:
     - estimators.RandomForestRegressor.params.n_estimators
-    metrics:
-    - report/scores.json:
-        cache: false
-    - report/params.json:
-        cache: false
-    outs:
-    - saved_models/model.joblib
-    - prediction_service/model/model.joblib
+    # metrics:
+    # - report/scores.json:
+    #     cache: false
+    # - report/params.json:
+    #     cache: false
+    # outs:
+    # - saved_models/model.joblib
+    # - prediction_service/model/model.joblib
+    
+    log_production_model:
+    cmd: python src/log_production_model.py --config=params.yaml
+    deps:
+    - src/log_production_model.py

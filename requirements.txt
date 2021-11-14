@@ -18,5 +18,7 @@ flask
 gunicorn
 pytest
 tox
+mlflow
+
 
 
