@@ -1,10 +1,17 @@
 This project is a complete end to end implementation of Store Sales Prediction using Machine Learning with DVC and MLFlow for Data Versioning and Model profiling to track the performance of the ML model.
 
+The best model is automatically deployed with lowest MAE score across all the models
+
 # Objective
 Primary aim of this project is to build machine learning model that should be able to predict the sales of the different stores of Big Mart according to the provided dataset.
 
 [You can reach the application here]
 https://storesalesprediction1.herokuapp.com/
+
+
+MLFlow Snapshot
+
+![alt-text](https://github.com/Harish2f/StoreSalesPrediction/blob/main/screenshots/img.png)
 
 
 # Problem statement
@@ -366,6 +373,12 @@ Push files to remote
 git add . && git commit -m "updated app configuration"
 
 git push origin main
+```
+
+Create log production model to catch the log of the model
+
+```bash
+touch src/log_production_model.py
 ```
 
 create an artifcats folder to Log ML metrics
