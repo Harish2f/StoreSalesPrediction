@@ -8,6 +8,9 @@ Primary aim of this project is to build machine learning model that should be ab
 [You can reach the application here]
 https://storesalesprediction1.herokuapp.com/
 
+# Project Video
+
+![StoreSalesPrediction](https://github.com/Harish2f/StoreSalesPrediction/blob/main/screenshots/StoreSalesPrediction.gif)
 
 MLFlow Snapshot
 
